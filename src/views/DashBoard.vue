@@ -1,15 +1,15 @@
 <template>
   <div>
-    <Home />
+    <DashBoard />
   </div>
 </template>
 
 <script>
-  import Home from '../components/Home'
+  import DashBoard from '../components/DashBoard'
 
   export default {
     components: {
-      Home
+      DashBoard
     }
   }
 </script>

@@ -2,8 +2,12 @@ import Vue from 'vue'
 import './plugins/vuetify'
 import App from './App.vue'
 import router from './router'
+import axios from 'axios'
 
 Vue.config.productionTip = false
+Vue.prototype.$appName = 'Felipe Muner CRUD'
+Vue.prototype.$API = 'http://localhost:3000'
+Vue.prototype.$http = axios;
 
 new Vue({
   router,
