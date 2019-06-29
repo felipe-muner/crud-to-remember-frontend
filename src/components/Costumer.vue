@@ -1,6 +1,6 @@
 <template>
   <div class="">
-    <h2 class="ma-5">Sou a página oficial</h2>
+    <h2 class="ma-3">felipe costumer</h2>
   </div>
 </template>
 
