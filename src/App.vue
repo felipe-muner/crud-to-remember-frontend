@@ -49,10 +49,9 @@
         app
       >
         <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
-        <v-icon class="">youtube</v-icon>
-        <v-icon>build</v-icon>
+        <v-icon color="white" class="ml-5">build</v-icon>
         <v-toolbar-title class="mr-5 align-center">
-          <span class="title">Felipe CRUD Example</span>
+          <span class="color-white">Felipe CRUD Example</span>
         </v-toolbar-title>
       </v-toolbar>
       <v-content>
@@ -96,7 +95,7 @@
   }
 </script>
 <style media="screen">
-  .title{
+  .color-white{
     color: white;
   }
 </style>
