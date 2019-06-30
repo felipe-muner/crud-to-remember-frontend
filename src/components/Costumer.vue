@@ -2,6 +2,10 @@
   <div class="ma-2 mt-3">
     <v-card>
       <v-card-title>
+        <AddCostumer/>
+        <EditCostumer :itemsTable="itemsTable"/>
+        <DeleteCostumer :itemsTable="itemsTable" />
+        <v-spacer></v-spacer>
         <v-text-field
           append-icon="search"
           label="Search"
@@ -50,6 +54,9 @@
 </template>
 
 <script>
+  import AddCostumer from './CostumerComponent/AddCostumer'
+  import EditCostumer from './CostumerComponent/EditCostumer'
+  import DeleteCostumer from './CostumerComponent/DeleteCostumer'
 
   export default {
     data: () => ({
@@ -71,6 +78,11 @@
       this.getCostumers()
         .then(c => this.itemsTable = c.data)
         .catch(error => console.log(error))
+    },
+    components:{
+      AddCostumer,
+      EditCostumer,
+      DeleteCostumer
     }
   }
 </script>
