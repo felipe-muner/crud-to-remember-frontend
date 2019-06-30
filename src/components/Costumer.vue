@@ -54,11 +54,11 @@
   export default {
     data: () => ({
       header: [
-        { text: 'ID', align: 'left', value: 'ID', class: ['text-md-center'] },
+        { text: 'ID', align: 'center', value: 'ID', class: ['text-md-center'] },
         { text: 'Name', align: 'left', value: 'Name' },
-        { text: 'Sex', align: 'center', value: 'Sex' },
+        { text: 'Sex', align: 'left', value: 'Sex' },
         { text: 'Birthday', align: 'left', value: 'Birthday' },
-        { text: 'Sibling Amount', align: 'left', value: 'SiblingNumber' },
+        { text: 'Sibling Amount', align: 'center', value: 'SiblingNumber' },
         { text: 'Active', align: 'left', value: 'Active', class: ['text-md-center'] }
       ],
       itemsTable: [],
