@@ -91,7 +91,12 @@
       source: String
     },
     created(){
-      
+
     }
   }
 </script>
+<style media="screen">
+  .title{
+    color: white;
+  }
+</style>

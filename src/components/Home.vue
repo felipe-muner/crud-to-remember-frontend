@@ -12,12 +12,7 @@
     props: {
       source: String
     },
-    created(){
-      this.$http.get(this.$API + '/costumer', {
-      }).then(response => {
-        console.log(response.data)
-      }).catch(error =>{
-      })
+    created(){      
     }
   }
 </script>
