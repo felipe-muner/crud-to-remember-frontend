@@ -30,7 +30,7 @@
               </v-flex>
             </v-layout>
             <v-layout row wrap>
-              <v-flex xs12>                
+              <v-flex xs12>
                 <v-menu
                   label="Birthday"
                   lazy
@@ -171,6 +171,7 @@ export default {
           this.$refs.form.reset()
           alert(response.toString())
           this.dialog = false
+          this.$bus.$emit('/costumer')
         }).catch(error=>{
           console.log(error)
           alert(error.toString())

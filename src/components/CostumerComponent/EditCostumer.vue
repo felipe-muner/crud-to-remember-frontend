@@ -188,6 +188,7 @@ export default {
           this.$refs.form.reset()
           alert(response.toString())
           this.dialog = false
+          this.$bus.$emit('/costumer')
         }).catch(error=>{
           console.log(error)
           alert(error.toString())

@@ -72,12 +72,21 @@
       search: '',
     }),
     methods: {
-      getCostumers(){ return this.$http.get(this.$API + '/costumer')}
+      getCostumers(){ return this.$http.get(this.$API + '/costumer')},
+      firstRender(){
+        this.getCostumers()
+          .then(c => this.itemsTable = c.data)
+          .catch(error => console.log(error))
+      }
     },
     created(){
-      this.getCostumers()
-        .then(c => this.itemsTable = c.data)
-        .catch(error => console.log(error))
+      this.firstRender()
+      this.$bus.$on('/costumer', () => {
+        this.firstRender()
+      })
+    },
+    beforeDestroy () {
+      this.$bus.$off('/costumer')
     },
     components:{
       AddCostumer,
