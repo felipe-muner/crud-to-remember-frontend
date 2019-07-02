@@ -158,6 +158,8 @@ export default {
   methods:{
     fillStartDate (){
       this.StartDate = this.Costumer.Birthday.substring(0,10)
+      this.StartDateFormatted = this.formatDate(this.StartDate)
+
     },
     formatDate (date) {
       if (!date) {
@@ -178,7 +180,7 @@ export default {
         this.$http.put(this.$API+'/costumer/edit',{
           ID: this.Costumer.ID,
           Name: this.Costumer.Name,
-          Birthday: this.Costumer.Birthday,
+          Birthday: this.StartDate,
           Sex: this.Costumer.Sex,
           BirthdayPlace: this.Costumer.BirthdayPlace,
           SiblingNumber: this.Costumer.SiblingNumber

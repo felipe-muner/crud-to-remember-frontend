@@ -30,7 +30,7 @@
               </v-flex>
             </v-layout>
             <v-layout row wrap>
-              <v-flex xs12>
+              <v-flex xs12>                
                 <v-menu
                   label="Birthday"
                   lazy
