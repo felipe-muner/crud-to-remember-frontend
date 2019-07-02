@@ -21,7 +21,7 @@
           <v-form v-model="valid" ref="form" lazy-validation>
             <v-layout row wrap>
               <v-flex xs12 class="pt-0">
-                <v-text-field style="font-size:11px !important;"
+                <v-text-field
                   label="Name"
                   v-model="Name"
                   :rules="NameRules"
@@ -171,16 +171,9 @@ export default {
           this.$refs.form.reset()
           alert(response.toString())
           this.dialog = false
-          // bus.$emit('/costumer')
-          // this.$swal('', response.data.msgInfoText, response.data.msgInfoStyle).finally(() => {
-          //   if(response.data.right) {
-          //     this.$refs.form.reset()
-          //     this.dialog = false
-          //     bus.$emit('/costumer')
-          //   }
-          // })
         }).catch(error=>{
-          // this.$swal('', error.message, 'error')
+          console.log(error)
+          alert(error.toString())
         })
       }
     }
